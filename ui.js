@@ -73,26 +73,3 @@ function stopCinematic (shouldTrigger = true) {
         console.log('Callback: CUIClose' )
     }
 }
-
-// setTimeout(() => {
-//     startCinematic({
-//         title: "John, vendeur d'armes",
-//         message: "Salut mec, j'ai tout ce qu'il te faut. Qu'est-ce que tu veux ?",
-//         actions: [
-//             {
-//                 text: "Acheter",
-//                 callback: "OpenGunsShop",
-//                 close_on_click: true
-//             },
-//             {
-//                 text: "Vendre",
-//                 callback: "OpenGunsShop",
-//                 close_on_click: false
-//             },
-//             {
-//                 text: "Rien (partir)",
-//                 close_on_click: true
-//             }
-//         ]
-//     })
-// }, 500)

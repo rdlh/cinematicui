@@ -7,49 +7,14 @@ SetWebAlignment(cinematicUIWeb, 0, 0)
 SetWebAnchors(cinematicUIWeb, 0, 0, 1, 1)
 SetWebURL(cinematicUIWeb, "http://asset/cinematicui/ui.html")
 
-AddEvent("OnKeyPress", function(key)
-    if key == "F7" then
-        startCinematic({
-            title = "John, vendeur d'armes",
-            message = "Salut mec, j'ai tout ce qu'il te faut. Qu'est-ce que tu veux ?",
-            actions = {
-                {
-                    text = "Acheter",
-                    callback = "OpenGunsShop",
-                    close_on_click = true
-                },
-                {
-                    text = "Vendre",
-                    callback = "OpenGunsShop",
-                    close_on_click = false
-                },
-                {
-                    text = "Rien (partir)",
-                    callback = "CUIGoodbye",
-                }
-            }
-        })
-    end
-end)
-
 AddEvent("CUIClose", function()
     stopCinematic()
-end)
-
-AddEvent("CUIGoodbye", function()
-    updateCinematic({
-        message = "Ok pas de soucis, à la prochaine !"
-    })
-    Delay(1500, function()
-		stopCinematic()
-    end)
 end)
 
 function startCinematic(data, npc, animation)
     currentNpc = npc or GetNearestNPC()
     SetNearClipPlane(15)
     EnableFirstPersonCamera(true)
-    OnsetRP.hideRPHud()
     ShowChat(false)
     SetIgnoreLookInput(true)
     SetIgnoreMoveInput(true)
@@ -71,7 +36,6 @@ function stopCinematic()
     currentNpc = null
     SetNearClipPlane(0)
     EnableFirstPersonCamera(false)
-    --OnsetRP.showRPHud()
     ShowChat(true)
     SetIgnoreLookInput(false)
     SetIgnoreMoveInput(false)
