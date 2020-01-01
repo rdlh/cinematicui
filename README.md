@@ -1,6 +1,10 @@
 # Cinematic-UI
-### [DEMO](https://youtu.be/K3zaY7evqhk)
 An easy-to-use UI to create simple cinematic conversations with NPCs on Onset
+
+## Demo:
+[![Demo](https://j.gifs.com/D1xDlY.gif)](https://www.youtube.com/watch?v=K3zaY7evqhk)  
+[FULL DEMO AVAILABLE HERE](https://www.youtube.com/watch?v=K3zaY7evqhk)
+
 ## Import package:
 ```
 local CUI = ImportPackage("cinematicui")
